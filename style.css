@@ -1,0 +1,146 @@
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #007bff, #00d4ff);
+    background-attachment: fixed;
+    color: #333;
+    animation: fadeIn 2s ease-in;
+}
+header {
+    background-color: rgba(0, 123, 255, 0.9);
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+header h1 {
+    margin: 0;
+    animation: slideIn 1s ease-in-out;
+}
+nav {
+    margin-top: 1rem;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+nav a:hover {
+    text-decoration: underline;
+    color: #ffcc00;
+}
+section {
+    padding: 2rem;
+    max-width: 800px;
+    margin: 2rem auto;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    animation: popIn 1s ease-in;
+}
+.section-title {
+    margin-bottom: 1rem;
+    color: #007bff;
+    font-size: 1.8rem;
+    text-align: center;
+}
+.button {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+.button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+    animation: fadeIn 2s ease-in;
+}
+footer a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+footer a:hover {
+    color: #ffcc00;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+    nav a {
+        display: block;
+        margin: 10px 0;
+    }
+    section {
+        padding: 1.5rem;
+        margin: 1rem;
+    }
+    .section-title {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+    section {
+        padding: 1rem;
+        margin: 0.5rem;
+    }
+    .section-title {
+        font-size: 1.3rem;
+    }
+    nav a {
+        font-size: 0.9rem;
+    }
+    .button {
+        padding: 0.4rem 0.8rem;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes slideIn {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes popIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
